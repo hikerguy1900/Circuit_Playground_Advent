@@ -1,5 +1,5 @@
 {
-    "name": "Circuit_Playground_Advent",
+    "name": "Advent Program",
     "description": "",
     "dependencies": {
         "circuit-playground": "*"
@@ -15,5 +15,5 @@
     "supportedTargets": [
         "adafruit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }

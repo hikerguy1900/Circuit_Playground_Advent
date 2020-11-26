@@ -1,42 +1,72 @@
-# Blinky Blinky
-
+# Advent
 ## Introduction @fullscreen
-Let's program! This tutorial will guide you through creating
-a program for the Circuit Playground Express. The tutorial was
-written for parents and children. Once you've finished this
-tutorial I hope you feel confident to experiment with your
-own programs. To get started click "Next" to the right.
+Let's transform our napkin holders into an Advent
+calendar and Bethlehem star. 
 
 ## Step 1
-Step 1 test.
+Get a ``||input.buttonA.onEvent()||`` block from ``||input.Input||`` and 
+drag it to an empty spot in your work space.
 
-> Open this page at [https://hikerguy1900.github.io/circuit_playground_advent/](https://hikerguy1900.github.io/circuit_playground_advent/)
+```blocks
+console.log("\"Start\"")
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+})
+```
 
-## Use as Extension
+## Step 2
+From ``||variables.Variables||`` click on "Make a Varible..." and name
+it, "button_count".
 
-This repository can be added as an **extension** in MakeCode.
+Get a ``||input.buttonA.onEvent()||`` block from ``||input.Input||`` and 
+drag it to an empty spot in your work space.
 
-* open [https://makecode.adafruit.com/](https://makecode.adafruit.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/hikerguy1900/circuit_playground_advent** and import
+```blocks
+console.log("\"Start\"")
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    button_count += 1
+    console.logValue("button_count", button_count)
+})
 
-## Edit this project ![Build status badge](https://github.com/hikerguy1900/circuit_playground_advent/workflows/MakeCode/badge.svg)
+## Finish
 
-To edit this repository in MakeCode.
+input.buttonA.onEvent(ButtonEvent.LongClick, function () {
+    music.setVolume(255)
+    music.playMelody("A F E F D G E F ", 120)
+    music.setVolume(0)
+})
 
-* open [https://makecode.adafruit.com/](https://makecode.adafruit.com/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/hikerguy1900/circuit_playground_advent** and click import
-
-## Blocks preview
-
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com/hikerguy1900/circuit_playground_advent/raw/master/.github/makecode/blocks.png)
-
-#### Metadata (used for search, rendering)
-
-* for PXT/adafruit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    button_count += 1
+    if (button_count >= 6) {
+        button_count = 0
+    }
+})
+let button_count = 0
+button_count = 0
+music.stopAllSounds()
+music.setVolume(0)
+forever(function () {
+    if (button_count == 1) {
+        light.showRing(
+        `black black black pink pink black black black black black`
+        )
+    } else if (button_count == 2) {
+        light.showRing(
+        `pink pink black pink pink black black black black black`
+        )
+    } else if (button_count == 3) {
+        light.showRing(
+        `pink pink black pink pink black black black purple purple`
+        )
+    } else if (button_count == 4) {
+        light.showRing(
+        `pink pink black pink pink pink pink black purple purple`
+        )
+    } else if (button_count == 5) {
+        light.showAnimationFrame(light.sparkleAnimation)
+        pause(500)
+        light.setAll(0xffff00)
+    } else {
+        light.clear()
+    }
+})

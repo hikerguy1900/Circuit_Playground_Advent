@@ -5,6 +5,7 @@ input.buttonA.onEvent(ButtonEvent.LongClick, function () {
 })
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     button_count += 1
+    console.logValue("button_count", button_count)
     if (button_count >= 6) {
         button_count = 0
     }
@@ -13,6 +14,7 @@ let button_count = 0
 button_count = 0
 music.stopAllSounds()
 music.setVolume(0)
+console.log("\"Start\"")
 forever(function () {
     if (button_count == 1) {
         light.showRing(
