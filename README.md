@@ -14,6 +14,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 ```
 
 ## Step 2
+``||variables.Variables||``
 From ``||variables.Variables||`` click on "Make a Varible..." and name
 it, "button_count".
 
@@ -27,6 +28,16 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
     console.logValue("button_count", button_count)
 })
 
+## Step 3
+Under Advanced find the ``||console.Console||'' gorup and
+select ``||console.logValue()||''. 
+
+```blocks
+console.log("\"Start\"")
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    button_count += 1
+    console.logValue("button_count", button_count)
+})
 ## Finish
 
 input.buttonA.onEvent(ButtonEvent.LongClick, function () {
