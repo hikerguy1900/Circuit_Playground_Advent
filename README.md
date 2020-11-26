@@ -1,3 +1,14 @@
+# Blinky Blinky
+
+## Introduction @fullscreen
+Let's program! This tutorial will guide you through creating
+a program for the Circuit Playground Express. The tutorial was
+written for parents and children. Once you've finished this
+tutorial I hope you feel confident to experiment with your
+own programs. To get started click "Next" to the right.
+
+## Step 1
+Step 1 test.
 
 > Open this page at [https://hikerguy1900.github.io/circuit_playground_advent/](https://hikerguy1900.github.io/circuit_playground_advent/)
 

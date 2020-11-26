@@ -1,1 +1,1 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><block type="forever" id="N4v=-`pXaPr;od{Zu=:@" x="0" y="0"/></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="forever" id="N4v=-`pXaPr;od{Zu=:@" x="0" y="0"><statement name="HANDLER"><block type="neopixel_show_ring_colors" id="TFn1I$HfZH1`_R=SSXNY"><field name="colors">"red red red red red red red red red red"</field></block></statement></block></xml>
