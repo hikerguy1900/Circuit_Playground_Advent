@@ -1,41 +1,51 @@
 ### @activities true
-
 # Advent
 ## Introduction
-Let's transform our napkin holders into an Advent
-calendar and Bethlehem star. 
 
 ## Activity 1: Varaibles
-One description.
-
 ### Step 1
-Get a ``||input.buttonA.onEvent()||`` block from ``||input.Input||`` and 
-drag it to an empty spot in your work space.
+Variables store information. They allow your program to
+remember something. In this activity we will create a
+varaible that will remember how many times button, "A"
+was pressed.
 
+### Step 2
+Get a ``||input.on buttonA click||`` block from
+``||input.Input||`` and drag it to an empty spot in your
+workspace.
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-### Step 2
-``||variables.Variables||``
-From ``||variables.Variables||`` click on "Make a Varible..." and name
-it, "button_count".  Open ``||variables.Variables||`` again and drag
-the "change button_count by 1" block inside of your,
-"on button A click" block
-
+### Step 3
+From ``||variables.Variables||`` click on "Make a Varible..."
+and name it, "button_count".  Now drag the
+``||variables.change button_count by 1||`` block inside of
+your, ``||input.on buttonA click||`` block.
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     button_count += 1
 })
 ```
 
-### Step 3
+### Step 4
 Under ``||advanced.Advanced||`` open the 
-``||console.Console||`` gorup and drag
+``||console.Console||`` group and drag
 ``||console.console log value x = 0||`` to the bottom of
-your, "on button A click".
+your, ``||input.on buttonA click||``.
+```blocks
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    button_count += 1
+    console.logValue("x", 0)
+})
+```
 
+### Step 5
+Go back to ``||variables.Variables||`` and drag 
+``||variables.button_count||`` on top of the "0" in
+``||console.console log value x = 0||``. Next change,
+"x" to, "button_count".
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     button_count += 1
@@ -43,14 +53,82 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-## Activity 2: Conditional Exeuction
-Two description
+### Step 6
+Let's simulate! Click on the, "A" button (left button),
+once. "Show console Simulator" should appear. Click on it.
+Now you should see a strip chart. Try clicking on the,
+"A", button several times to see how the graph changes.
+You'll notice that each time you click on the button 
+the value of our button_count varaible goees up by 1.
+This is exactly what we setup our program to do!
 
+## Activity 2: Conditional Execution
 ### Step 1
-Some instructions
+Our last activity was about variables. Recall our variable's
+value increased each time we clicked the, "A" button. But,
+value never went down. In this activity we will implement
+a condition that will set our varaible back to 0 once it 
+reaches a specific value.
 
 ### Step 2
-Some more insructions.
+From ``||logic.Logic||`` drag a ``||logic.if then true||``
+block and place it after the console block in your program.
+The ``||logic.if then true||`` is in the "conditionals"
+section.
+```blocks
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    button_count += 1
+    console.logValue("button_count", button_count)
+    if (true) {
+    }
+})
+```
+
+### Step 3
+From ``||logic.Logic||`` drag a ``||logic.0 = 0||`` block
+from the comparison section. Drop it on top of the, "true"
+of your if block. Notice how the shape of the,
+``||logic.true||``, and the ``||logic.0 = 0||`` are the same.
+
+```blocks
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    button_count += 1
+    console.logValue("button_count", button_count)
+    if (0 == 0) {
+    }
+})
+```
+
+### Step 4
+From ``||variables.Variables||`` drag your
+``||variables.button_count||`` block on top
+of the left "0" in the ``||logic.0 = 0||``. Next change the
+equal sign (=) to greater than (>). Finally change the zero
+on the right to 5.
+
+```blocks
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    button_count += 1
+    console.logValue("button_count", button_count)
+    if (button_count > 5) {
+    }
+})
+```
+### Step 5
+You are almost there. Last step before we simulate. From
+``||variables.Variables||`` drag a 
+``||variables.set button_count to 0||`` inside of your
+``||logic.if button_count > 5||``.
+```blocks
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    button_count += 1
+    console.logValue("button_count", button_count)
+    if (button_count > 5) {
+        button_count = 0
+    }
+})
+```
+
 
 ## Activity 3: Conditional Exeuction
 Two description
