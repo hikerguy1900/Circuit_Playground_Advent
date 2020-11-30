@@ -5,7 +5,7 @@
 Let's transform our napkin holders into an Advent
 calendar and Bethlehem star. 
 
-## Activity 1 One Name
+## Activity 1: Varaibles
 One description.
 
 ### Step 1
@@ -43,8 +43,24 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-## Activity 2 Two Name
+## Activity 2: Conditional Exeuction
 Two description
+
+### Step 1
+Some instructions
+
+### Step 2
+Some more insructions.
+
+## Activity 3: Conditional Exeuction
+Two description
+
+### Step 1
+Some instructions
+
+### Step 2
+Some more insructions.
+
 
 ## Finish
 
