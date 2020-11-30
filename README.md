@@ -1,45 +1,51 @@
+### @activities true
+
 # Advent
-## Introduction @fullscreen
+## Introduction
 Let's transform our napkin holders into an Advent
 calendar and Bethlehem star. 
 
-## Step 1
+## Activity 1 One Name
+One description.
+
+### Step 1
 Get a ``||input.buttonA.onEvent()||`` block from ``||input.Input||`` and 
 drag it to an empty spot in your work space.
 
 ```blocks
-console.log("\"Start\"")
 input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-## Step 2
+### Step 2
 ``||variables.Variables||``
 From ``||variables.Variables||`` click on "Make a Varible..." and name
-it, "button_count".
-
-Get a ``||input.buttonA.onEvent()||`` block from ``||input.Input||`` and 
-drag it to an empty spot in your work space.
+it, "button_count".  Open ``||variables.Variables||`` again and drag
+the "change button_count by 1" block inside of your,
+"on button A click" block
 
 ```blocks
-console.log("\"Start\"")
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    button_count += 1
+})
+```
+
+### Step 3
+Under ``||advanced.Advanced||`` open the 
+``||console.Console||`` gorup and drag
+``||console.console log value x = 0||`` to the bottom of
+your, "on button A click".
+
+```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     button_count += 1
     console.logValue("button_count", button_count)
 })
 ```
 
-## Step 3
-Under Advanced find the ``||console.Console||'' gorup and
-select ``||console.logValue()||''. 
+## Activity 2 Two Name
+Two description
 
-```blocks
-console.log("\"Start\"")
-input.buttonA.onEvent(ButtonEvent.Click, function () {
-    button_count += 1
-    console.logValue("button_count", button_count)
-})
-```
 ## Finish
 
 input.buttonA.onEvent(ButtonEvent.LongClick, function () {
