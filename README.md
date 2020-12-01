@@ -193,11 +193,10 @@ forever(function () {
 ```
 
 ### Step
-Click on the + sign at the bottom of your if block 5 times.
-Put a ``||logic.0 = 0||`` in all of the "if" statements.
-Then replace all of the left 0's with 
-``||variables.button_count||``. Replace all of the 0's by
-counting up from 2 to 5.
+Click on the + sign at the bottom of your if block once.
+Put a ``||logic.0 = 0||`` in the new "else if" statement.
+Then replace the left 0 with ``||variables.button_count||``.
+Replace all of the 0 with 2.
 ```blocks
 forever(function () {
     if (button_count == 1) {
@@ -205,15 +204,13 @@ forever(function () {
         `black black black pink pink black black black black black`
         )
     } else if (button_count == 2) {
-    } else if (button_count == 3) {
-    } else if (button_count == 4) {
-    } else if (button_count == 5) {
     } else {
     }
 })
 ```
 ### Step
-Drag a ``||light.showRing()||`` into each of the if blocks.
+Drag a ``||light.showRing()||`` in to all of the "else if"
+blocks but not the else.
 
 ```blocks
 forever(function () {
@@ -225,91 +222,26 @@ forever(function () {
         light.showRing(
         `pink pink black pink pink black black black black black`
         )
-    } else if (button_count == 3) {
+    } else {
+    }
+})
+```
+### Step
+Drag a ``||light.clear||`` into the "else" block.
+```blocks
+forever(function () {
+    if (button_count == 1) {
         light.showRing(
-        `pink pink black pink pink black black black purple purple`
+        `black black black pink pink black black black black black`
         )
-    } else if (button_count == 4) {
+    } else if (button_count == 2) {
         light.showRing(
-        `pink pink black pink pink pink pink black purple purple`
+        `pink pink black blue blue black black black black black`
         )
-    } else if (button_count == 5) {
-        light.showAnimationFrame(light.sparkleAnimation)
-        pause(500)
-        light.setAll(0xffff00)
     } else {
         light.clear()
     }
 })
 ```
-### Step
-Drag a ``||light.showRing()||`` into each of the if blocks.
-
-```blocks
-forever(function () {
-    if (button_count == 1) {
-        light.showRing(
-        `black black black pink pink black black black black black`
-        )
-    } else if (button_count == 2) {
-        light.showRing(
-        `pink pink black pink pink black black black black black`
-        )
-    } else if (button_count == 3) {
-        light.showRing(
-        `pink pink black pink pink black black black purple purple`
-        )
-    } else if (button_count == 4) {
-        light.showRing(
-        `pink pink black pink pink pink pink black purple purple`
-        )
-    } else if (button_count == 5) {
-    } else {
-    }
-})
-```
-
 
 ## Finish
-
-input.buttonA.onEvent(ButtonEvent.LongClick, function () {
-    music.setVolume(255)
-    music.playMelody("A F E F D G E F ", 120)
-    music.setVolume(0)
-})
-
-input.buttonA.onEvent(ButtonEvent.Click, function () {
-    button_count += 1
-    if (button_count >= 6) {
-        button_count = 0
-    }
-})
-let button_count = 0
-button_count = 0
-music.stopAllSounds()
-music.setVolume(0)
-forever(function () {
-    if (button_count == 1) {
-        light.showRing(
-        `black black black pink pink black black black black black`
-        )
-    } else if (button_count == 2) {
-        light.showRing(
-        `pink pink black pink pink black black black black black`
-        )
-    } else if (button_count == 3) {
-        light.showRing(
-        `pink pink black pink pink black black black purple purple`
-        )
-    } else if (button_count == 4) {
-        light.showRing(
-        `pink pink black pink pink pink pink black purple purple`
-        )
-    } else if (button_count == 5) {
-        light.showAnimationFrame(light.sparkleAnimation)
-        pause(500)
-        light.setAll(0xffff00)
-    } else {
-        light.clear()
-    }
-})
