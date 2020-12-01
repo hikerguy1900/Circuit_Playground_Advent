@@ -56,7 +56,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 ### Step
 Let's simulate! On the left is a picture of the Circuit
 Playground Express. Left of center is the, "A" button.
-The butto is the black circle. The button label is a black
+The button is the black circle. The button label is a black
 "A" inside of a white triangle. Once you find the button,
 click on it one time.
 
@@ -91,7 +91,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 
 ### Step
 From ``||logic.Logic||`` drag a ``||logic.0 = 0||`` block
-on top of the, "true" of your if block. Notice how the
+on top of the, "true", in your "if" block. Notice how the
 shape of the, ``||logic.true||``, and the
 ``||logic.0 = 0||`` are the same.
 ```blocks
@@ -145,8 +145,8 @@ appear. Click on, "Show console Simulator".
 Now you should see a strip chart. Try clicking on the,
 "A", button several times to see how the graph changes.
 You'll notice that each time you click on the button 
-the value of our button_count varaible goees up by 1.
-And, this time after clicking 6 times the value of our
+the value of our button_count varaible goes up by 1.
+However, this time after clicking 6 times the value of our
 button_count variable is set back to 0.
 
 ## Activity 3: Action Lights
@@ -194,8 +194,8 @@ forever(function () {
 
 ### Step
 Click on the + sign at the bottom of your if block 5 times.
-Replace all of the ``||logic.true||``'s with
-``||logic.0 = 0||``. Then replace all of the left 0's with 
+Put a ``||logic.0 = 0||`` in all of the "if" statements.
+Then replace all of the left 0's with 
 ``||variables.button_count||``. Replace all of the 0's by
 counting up from 2 to 5.
 ```blocks
@@ -212,9 +212,6 @@ forever(function () {
     }
 })
 ```
-
-
-
 ### Step
 Drag a ``||light.showRing()||`` into each of the if blocks.
 
@@ -242,6 +239,32 @@ forever(function () {
         light.setAll(0xffff00)
     } else {
         light.clear()
+    }
+})
+```
+### Step
+Drag a ``||light.showRing()||`` into each of the if blocks.
+
+```blocks
+forever(function () {
+    if (button_count == 1) {
+        light.showRing(
+        `black black black pink pink black black black black black`
+        )
+    } else if (button_count == 2) {
+        light.showRing(
+        `pink pink black pink pink black black black black black`
+        )
+    } else if (button_count == 3) {
+        light.showRing(
+        `pink pink black pink pink black black black purple purple`
+        )
+    } else if (button_count == 4) {
+        light.showRing(
+        `pink pink black pink pink pink pink black purple purple`
+        )
+    } else if (button_count == 5) {
+    } else {
     }
 })
 ```
