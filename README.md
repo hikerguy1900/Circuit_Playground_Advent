@@ -3,13 +3,13 @@
 ## Introduction
 
 ## Activity 1: Varaibles
-### Step 1
+### Step
 Variables store information. They allow your program to
 remember something. In this activity we will create a
 varaible that will remember how many times button, "A"
 was pressed.
 
-### Step 2
+### Step
 Get a ``||input.on button A click||`` block from
 ``||input.Input||`` and drag it to an empty spot in your
 workspace.
@@ -18,7 +18,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-### Step 3
+### Step
 From ``||variables.Variables||`` click on "Make a Varible..."
 and name it, "button_count".  Now drag the
 ``||variables.change button_count by 1||`` block inside of
@@ -29,7 +29,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-### Step 4
+### Step
 Under ``||advanced.Advanced||`` open the 
 ``||console.Console||`` group and drag
 ``||console.console log value x = 0||`` to the bottom of
@@ -41,7 +41,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-### Step 5
+### Step
 Go back to ``||variables.Variables||`` and drag 
 ``||variables.button_count||`` on top of the "0" in
 ``||console.console log value x = 0||``. Next change,
@@ -53,7 +53,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-### Step 6
+### Step
 Let's simulate! On the left is a picture of the Circuit
 Playground Express. Left of center is the, "A" button.
 The butto is the black circle. The button label is a black
@@ -70,14 +70,14 @@ the value of our button_count varaible goees up by 1.
 This is exactly what we setup our program to do!
 
 ## Activity 2: Conditional Execution
-### Step 1
+### Step
 Our last activity was about variables. Our variable's
 value increased each time we clicked the "A" button. But,
 the value never went down. In this activity we will
 add a condition that will set our varaible back to 0 once
 it reaches a specific value.
 
-### Step 2
+### Step
 From ``||logic.Logic||`` drag a ``||logic.if true then||``
 block and place it after the console block in your program.
 ```blocks
@@ -89,7 +89,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-### Step 3
+### Step
 From ``||logic.Logic||`` drag a ``||logic.0 = 0||`` block
 on top of the, "true" of your if block. Notice how the
 shape of the, ``||logic.true||``, and the
@@ -103,7 +103,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-### Step 4
+### Step
 From ``||variables.Variables||`` drag your
 ``||variables.button_count||`` block on top
 of the left "0" in the ``||logic.0 = 0||``. Next change the
@@ -154,17 +154,34 @@ button_count variable is set back to 0.
 Now that our program knows how to count let's control some
 lights (LEDs) with it.
 
-Now that you have some experience with programming we are 
-going to go a little faster. If you need help just click
+You have some experience with programming. So we can go 
+a little faster now. If you need help just click
 on the wise old owl to the left for a hint.
 
 We are also going to use the simulator a lot to check our
-progress. The simulator is always there to the left any
-time you want to see what your program does. And, don't
+progress. The simulator is always there to the left
+anytime you want to see what your program does. And, don't
 forget about slow-mo mode (snail) to see just which block
 of your program is running.
 
 ### Step
+From ``||logic.Logic||`` drag a ``||logic.if true then||``
+inside of the ``||loops.forever||`` block that is aready
+in your work space. From ``||logic.Logic||`` drag a
+``||logic.0 = 0||`` block on top of the, "true" of your
+if block. Next reaplce the left 0 with 
+``||variables.button_count||``. Finally change the right
+0 to 1.
+```blocks
+forever(function () {
+    if (button_count == 1) {
+    }
+})
+```
+### Step
+From ``||light.Light||`` drag a ``||light.showRing()||``
+inside of your if block.
+
 ```blocks
 forever(function () {
     if (button_count == 1) {
@@ -175,8 +192,32 @@ forever(function () {
 })
 ```
 
+### Step
+Click on the + sign at the bottom of your if block 5 times.
+Replace all of the ``||logic.true||``'s with
+``||logic.0 = 0||``. Then replace all of the left 0's with 
+``||variables.button_count||``. Replace all of the 0's by
+counting up from 2 to 5.
+```blocks
+forever(function () {
+    if (button_count == 1) {
+        light.showRing(
+        `black black black pink pink black black black black black`
+        )
+    } else if (button_count == 2) {
+    } else if (button_count == 3) {
+    } else if (button_count == 4) {
+    } else if (button_count == 5) {
+    } else {
+    }
+})
+```
+
+
 
 ### Step
+Drag a ``||light.showRing()||`` into each of the if blocks.
+
 ```blocks
 forever(function () {
     if (button_count == 1) {
