@@ -43,18 +43,18 @@ those concepts to create a simple Advent calendar.
 ## Step
 You've already learned alot about creating programs for your
 Circuit Playground by arranging the programming blocks. In
-this tutorial the code is already written. But, it does work.
-Let's fix it!
+this tutorial the code is already written. But, it does not
+work. :-( Let's fix it!
 
 ## Step
 Advent is the season of prepartion for Christmas. Christmas
 is when we remember Jesus's birth nealry 2,000 and 20 years
 ago. There are four weeks of Advent. Each week has a color
 and a theme. 
-* Week 1: Hope (Purple)
-* Week 2: Faith (Purple)
-* Week 3: Joe (Pink)
-* Week 4: Peace (Purple)
+- Week 1: Hope (Purple)
+- Week 2: Faith (Purple)
+- Week 3: Joe (Pink)
+- Week 4: Peace (Purple)
 
 We want to use button A on our Circuit Playgroud to count the
 weeks of Advent. We want the lights on our Circuit Playground
@@ -80,19 +80,19 @@ in the next step.
 ## Step
 When the condition for an "if" or "else if" statement is true
 the code in side runs. For example, we could say, 
-* If the number of wheels equels 1, then we have a unicycle.
-* Else if the number of wheels equals 2, then we have a bicycle.
-* Else if the number of wheels equals 3, then we have a tricycle.
-* Else, then I don't know the name of the cycle.
++ If the number of wheels equels 1, then we have a unicycle.
++ Else if the number of wheels equals 2, then we have a bicycle.
++ Else if the number of wheels equals 3, then we have a tricycle.
++ Else, then I don't know the name of the cycle.
 
 For our Advent Calendar we make a decision based on the how many
 times the button has been pressed (``||variables.button_count||``).
 
-* If ``||variables.button_count||`` = 1, then 1 purple light.
-* Else if ``||variables.button_count||`` = 2, then 2 purple lights.
-* Else if ``||variables.button_count||`` = 3, then 2 purple lights & 1 pink.
-* Else if ``||variables.button_count||`` = 4, then 3 purple lights & 1 pink.
-* Else, turn all lights off
+o If ``||variables.button_count||`` = 1, then 1 purple light.
+o Else if ``||variables.button_count||`` = 2, then 2 purple lights.
+o Else if ``||variables.button_count||`` = 3, then 2 purple lights & 1 pink.
+o Else if ``||variables.button_count||`` = 4, then 3 purple lights & 1 pink.
+o Else, turn all lights off
 
 Take a couple of minutes to see if you can find the problem in our
 program.
