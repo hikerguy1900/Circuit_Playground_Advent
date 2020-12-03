@@ -96,15 +96,11 @@ the code in side runs. For example, we could say,
 For our Advent Calendar we make a decision based on the how many
 times the button has been pressed (``||variables.button_count||``).
 
-o If ``||variables.button_count||`` = 1, then 1 purple light.
-
-o Else if ``||variables.button_count||`` = 2, then 2 purple lights.
-
-o Else if ``||variables.button_count||`` = 3, then 2 purple lights & 1 pink.
-
-o Else if ``||variables.button_count||`` = 4, then 3 purple lights & 1 pink.
-
-o Else, turn all lights off
+-- If ``||variables.button_count||`` = 1, then 1 purple light.
+-- Else if ``||variables.button_count||`` = 2, then 2 purple lights.
+-- Else if ``||variables.button_count||`` = 3, then 2 purple lights & 1 pink.
+-- Else if ``||variables.button_count||`` = 4, then 3 purple lights & 1 pink.
+-- Else, turn all lights off
 
 Take a couple of minutes to see if you can find the problem in our
 program.
