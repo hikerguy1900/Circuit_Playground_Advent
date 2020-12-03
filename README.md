@@ -51,10 +51,14 @@ Advent is the season of prepartion for Christmas. Christmas
 is when we remember Jesus's birth nealry 2,000 and 20 years
 ago. There are four weeks of Advent. Each week has a color
 and a theme. 
-- Week 1: Hope (Purple)
-- Week 2: Faith (Purple)
-- Week 3: Joe (Pink)
-- Week 4: Peace (Purple)
+
+-- Week 1: Hope (Purple)
+
+-- Week 2: Faith (Purple)
+
+-- Week 3: Joe (Pink)
+
+-- Week 4: Peace (Purple)
 
 We want to use button A on our Circuit Playgroud to count the
 weeks of Advent. We want the lights on our Circuit Playground
@@ -80,18 +84,26 @@ in the next step.
 ## Step
 When the condition for an "if" or "else if" statement is true
 the code in side runs. For example, we could say, 
-+ If the number of wheels equels 1, then we have a unicycle.
-+ Else if the number of wheels equals 2, then we have a bicycle.
-+ Else if the number of wheels equals 3, then we have a tricycle.
-+ Else, then I don't know the name of the cycle.
+
+-- If the number of wheels equels 1, then we have a unicycle.
+
+-- Else if the number of wheels equals 2, then we have a bicycle.
+
+-- Else if the number of wheels equals 3, then we have a tricycle.
+
+-- Else, then I don't know the name of the cycle.
 
 For our Advent Calendar we make a decision based on the how many
 times the button has been pressed (``||variables.button_count||``).
 
 o If ``||variables.button_count||`` = 1, then 1 purple light.
+
 o Else if ``||variables.button_count||`` = 2, then 2 purple lights.
+
 o Else if ``||variables.button_count||`` = 3, then 2 purple lights & 1 pink.
+
 o Else if ``||variables.button_count||`` = 4, then 3 purple lights & 1 pink.
+
 o Else, turn all lights off
 
 Take a couple of minutes to see if you can find the problem in our
@@ -102,57 +114,14 @@ All of the "if" and "else if" conditions in our program are set equal to
 0. That isn't correct. Let's change the numbers to the correct Advent
 week number based on our example "if" and "else if" statments below.
 
-* If ``||variables.button_count||`` = 1, then 1 purple light.
-* Else if ``||variables.button_count||`` = 2, then 2 purple lights.
-* Else if ``||variables.button_count||`` = 3, then 2 purple lights & 1 pink.
-* Else if ``||variables.button_count||`` = 4, then 3 purple lights & 1 pink.
-* Else, turn all lights off
+-- If ``||variables.button_count||`` = 1, then 1 purple light.
 
+-- Else if ``||variables.button_count||`` = 2, then 2 purple lights.
+
+-- Else if ``||variables.button_count||`` = 3, then 2 purple lights & 1 pink.
+
+-- Else if ``||variables.button_count||`` = 4, then 3 purple lights & 1 pink.
+
+-- Else, turn all lights off
 
 ## Finish
-### @diffs true
-Let's simulate! On the left is a picture of the Circuit
-Playground Express. Left of center is the, "A" button.
-The button is the black circle. The button label is a black
-"A" inside of a white triangle. Once you find the button,
-click on it one time.
-
-After you click once, "Show console Simulator", should
-appear. Click on, "Show console Simulator".
-
-Now you should see a strip chart. Try clicking on the,
-"A", button several times to see how the graph changes.
-You'll notice that each time you click on the button 
-the value of our button_count varaible goees up by 1.
-This is exactly what we setup our program to do!
-```blocks
-let button_count = 0
-input.buttonA.onEvent(ButtonEvent.Click, function () {
-    button_count += 1
-    console.logValue("button_count", button_count)
-    if (button_count > 4) {
-        button_count = 0
-    }
-})
-forever(function () {
-    if (button_count == 1) {
-        light.showRing(
-        `black black black purple purple black black black black black`
-        )
-    } else if (button_count == 2) {
-        light.showRing(
-        `purple purple black purple purple black black black black black`
-        )
-    } else if (button_count == 3) {
-        light.showRing(
-        `purple purple black purple purple black black black pink pink`
-        )
-    } else if (button_count == 4) {
-        light.showRing(
-        `purple purple black purple purple purple purple black pink pink`
-        )
-    } else {
-        light.clear()
-    }
-})
-```
