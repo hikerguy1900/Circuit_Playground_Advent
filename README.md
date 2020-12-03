@@ -97,17 +97,21 @@ For our Advent Calendar we make a decision based on the how many
 times the button has been pressed (``||variables.button_count||``).
 
 -- If ``||variables.button_count||`` = 1, then 1 purple light.
+
 -- Else if ``||variables.button_count||`` = 2, then 2 purple lights.
+
 -- Else if ``||variables.button_count||`` = 3, then 2 purple lights & 1 pink.
+
 -- Else if ``||variables.button_count||`` = 4, then 3 purple lights & 1 pink.
+
 -- Else, turn all lights off
 
 Take a couple of minutes to see if you can find the problem in our
 program.
 
 ## Step
-All of the "if" and "else if" conditions in our program are set equal to 
-0. That isn't correct. Let's change the numbers to the correct Advent
+All of the "if" and "else if" conditions in our program are set equal
+to 0 That isn't correct. Let's change the numbers to the correct Advent
 week number based on our example "if" and "else if" statments below.
 
 -- If ``||variables.button_count||`` = 1, then 1 purple light.
