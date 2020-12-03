@@ -1,6 +1,7 @@
 let button_count = 0
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     button_count += 1
+    console.logValue("button_count", button_count)
     if (button_count > 4) {
         button_count = 0
     }
